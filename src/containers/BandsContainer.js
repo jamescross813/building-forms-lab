@@ -11,9 +11,8 @@ class BandsContainer extends Component {
     return(
       <div>
         BandsContainer
-        <BandInput addBand={this.props.addBand} bands={this.props.bands}/>
+        <BandInput addBand={this.props.addBand}/>
         {this.renderBands()}
-        
       </div>
     )
   }
@@ -29,7 +28,7 @@ class BandsContainer extends Component {
     return{
       addBand: (formData) => dispatch({
         type: "ADD_BAND",
-        payload: formData
+        name: formData
       })
     }
   }
