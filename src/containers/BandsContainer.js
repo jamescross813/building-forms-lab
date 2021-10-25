@@ -5,7 +5,7 @@ import uuid from "uuid"
 
 class BandsContainer extends Component {
 
-  renderBands=()=>this.props.bands.map((band) => <li key={uuid()} text={band}/>)
+  renderBands=()=>this.props.bands.map((band) => <li key={uuid()}>{band.name}</li>)
 
   render() {
     return(
@@ -34,5 +34,6 @@ class BandsContainer extends Component {
   }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BandsContainer)
+
 
 
